@@ -1,0 +1,203 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{80a83b96-d7fb-45b4-99e6-5d4b0758581d}</ProjectGuid>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+        <DCC_DependencyCheckOutputName>bin\debug\PsExecGui.exe</DCC_DependencyCheckOutputName>
+        <MainSource>PsExecGui.dpr</MainSource>
+        <FrameworkType>VCL</FrameworkType>
+        <ProjectVersion>15.3</ProjectVersion>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win64)'!=''">
+        <Cfg_2_Win64>true</Cfg_2_Win64>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=3.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=3.0.0.0;Comments=</VerInfo_Keys>
+        <DCC_UnitSearchPath>C:\Program Files (x86)\jedi\jvcl\jvcl\run;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_MajorVer>3</VerInfo_MajorVer>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;System.Win;$(DCC_Namespace)</DCC_Namespace>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <DCC_Namespace>Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <DCC_Namespace>Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <Version>7.0</Version>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_ExeOutput>.\bin\release</DCC_ExeOutput>
+        <DCC_ResourcePath>C:\Program Files (x86)\DelphiShared\JVCL340CompleteJCL221-Build3845\jvcl\run;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\tools\TPerlRegex;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\tools\MaxComponents\mxExports\COMPONENT;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\tools\MaxComponents\mxNativeExcel\COMPONENT;C:\Program Files (x86)\DelphiShared\JVCL340CompleteJCL221-Build3845\jvcl\run;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\tools\MaxComponents\mxStorage\COMPONENT;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressLibrary\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressCore Library\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\XP Theme Manager\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressDataController\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressEditors Library 5\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressQuantumGrid 6\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressPageControl 2\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressGDI+ Library\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressExport Library\Sources;$(DCC_ResourcePath)</DCC_ResourcePath>
+        <DCC_ObjPath>C:\Program Files (x86)\DelphiShared\JVCL340CompleteJCL221-Build3845\jvcl\run;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\tools\TPerlRegex;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\tools\MaxComponents\mxExports\COMPONENT;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\tools\MaxComponents\mxNativeExcel\COMPONENT;C:\Program Files (x86)\DelphiShared\JVCL340CompleteJCL221-Build3845\jvcl\run;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\tools\MaxComponents\mxStorage\COMPONENT;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressLibrary\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressCore Library\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\XP Theme Manager\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressDataController\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressEditors Library 5\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressQuantumGrid 6\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressPageControl 2\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressGDI+ Library\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressExport Library\Sources;$(DCC_ObjPath)</DCC_ObjPath>
+        <DCC_IncludePath>C:\Program Files (x86)\DelphiShared\JVCL340CompleteJCL221-Build3845\jvcl\run;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\tools\TPerlRegex;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\tools\MaxComponents\mxExports\COMPONENT;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\tools\MaxComponents\mxNativeExcel\COMPONENT;C:\Program Files (x86)\DelphiShared\JVCL340CompleteJCL221-Build3845\jvcl\run;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\tools\MaxComponents\mxStorage\COMPONENT;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressLibrary\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressCore Library\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\XP Theme Manager\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressDataController\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressEditors Library 5\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressQuantumGrid 6\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressPageControl 2\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressGDI+ Library\Sources;C:\Program Files (x86)\DelphiShared\Developer Express Inc\ExpressExport Library\Sources;$(DCC_IncludePath)</DCC_IncludePath>
+        <DCC_DcuOutput>.\dcu\release</DCC_DcuOutput>
+        <DCC_ObjOutput>.\dcu\release</DCC_ObjOutput>
+        <DCC_HppOutput>.\dcu\release</DCC_HppOutput>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_MajorVer>1</VerInfo_MajorVer>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <Version>7.0</Version>
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_ExeOutput>.\bin\debug</DCC_ExeOutput>
+        <DCC_ResourcePath>C:\Users\mgrove\data\code\DelphiAscii\_components\jvcl\run;C:\Program Files (x86)\EurekaLab\EurekaLog 6\Delphi11;$(DCC_ResourcePath)</DCC_ResourcePath>
+        <DCC_ObjPath>C:\Users\mgrove\data\code\DelphiAscii\_components\jvcl\run;C:\Program Files (x86)\EurekaLab\EurekaLog 6\Delphi11;$(DCC_ObjPath)</DCC_ObjPath>
+        <DCC_IncludePath>C:\Users\mgrove\data\code\DelphiAscii\_components\jvcl\run;C:\Program Files (x86)\EurekaLab\EurekaLog 6\Delphi11;$(DCC_IncludePath)</DCC_IncludePath>
+        <DCC_MapFile>3</DCC_MapFile>
+        <DCC_DcuOutput>.\dcu\debug</DCC_DcuOutput>
+        <DCC_ObjOutput>.\dcu\debug</DCC_ObjOutput>
+        <DCC_HppOutput>.\dcu\debug</DCC_HppOutput>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <DCC_Define>madExcept;$(DCC_Define)</DCC_Define>
+        <DCC_IntegerOverflowCheck>true</DCC_IntegerOverflowCheck>
+        <DCC_RangeChecking>true</DCC_RangeChecking>
+        <Icon_MainIcon>PsExecGui_Icon.ico</Icon_MainIcon>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_MajorVer>1</VerInfo_MajorVer>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Parameters>
+                    <Parameters Name="UseLauncher">False</Parameters>
+                    <Parameters Name="LoadAllSymbols">True</Parameters>
+                    <Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+                </Parameters>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">3</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">0</VersionInfo>
+                    <VersionInfo Name="Build">0</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1033</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName"/>
+                    <VersionInfoKeys Name="FileDescription"/>
+                    <VersionInfoKeys Name="FileVersion">3.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright"/>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename"/>
+                    <VersionInfoKeys Name="ProductName"/>
+                    <VersionInfoKeys Name="ProductVersion">3.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments"/>
+                </VersionInfoKeys>
+                <Source>
+                    <Source Name="MainSource">PsExecGui.dpr</Source>
+                </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k190.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcbofficexp190.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k190.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp190.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="src\main.pas">
+            <Form>Form1</Form>
+        </DCCReference>
+        <DCCReference Include="src\uHelpers.pas"/>
+        <DCCReference Include="src\uMiniReg.pas"/>
+        <DCCReference Include="src\ThreadUtilities.pas"/>
+        <DCCReference Include="src\uThrdAbortThreads.pas"/>
+        <DCCReference Include="src\uWorkerThread.pas"/>
+        <DCCReference Include="src\frmExamples.pas">
+            <Form>frmUsageExamples</Form>
+        </DCCReference>
+        <DCCReference Include="src\AsyncCalls.pas"/>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>
