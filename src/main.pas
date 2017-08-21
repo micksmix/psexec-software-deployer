@@ -418,19 +418,6 @@ begin
     sExtension := ExtractFileExt(SaveDialog1.Filename);
 
     ExportGrid(SaveDialog1.FileName, sExtension);
-    //    //ExportGrid(TJvDBGridExcelExport);
-    //    if SameText(sExtension, '.xls') then
-    //      ExportGridToExcel(SaveDialog1.FileName, cxGrid1, True, True, True, 'xls')
-    //    else if SameText(sExtension, '.xml') then
-    //      ExportGridToXML(SaveDialog1.FileName, cxGrid1, True, True, 'xml')
-    //        //mxDBGridExport1.ExportType := xtHTML
-    //    else if SameText(sExtension, '.txt') then
-    //      ExportGridToText(SaveDialog1.FileName, cxGrid1, True, True, '   ', '> ',
-    //        ' <', 'txt')
-    //        //mxDBGridExport1.ExportType := xtHTML
-    //    else if SameText(sExtension, '.html') then
-    //      ExportGridToHTML(SaveDialog1.FileName, cxGrid1, True, True, 'html');
-
   end
   else
   begin
@@ -608,35 +595,7 @@ end;
 procedure TForm1.Copytoclipboard1Click(Sender: TObject);
 begin
   ShowMessage('not implemented');
-  //  mxDBGridExport1.ExportType := xtClipboard;
-  //  mxDBGridExport1.Execute;
-  //  DBGrid1.Columns[0].Width := 100;
-  //  //DBGrid1.Columns[1].Width := 150;
-  //  DBGrid1.Columns[1].Width := 500;
 end;
-
-//procedure TForm1.cxGrid1DBTableView1GetCellHeight(
-//  Sender: TcxCustomGridTableView; ARecord: TcxCustomGridRecord;
-//  AItem: TcxCustomGridTableItem; ACellViewInfo: TcxGridTableDataCellViewInfo;
-//  var AHeight: Integer);
-//begin
-//  //
-//end;
-//
-//procedure TForm1.cxGrid1DBTableView1InitEditValue(Sender:
-//  TcxCustomGridTableView; AItem:
-//  TcxCustomGridTableItem; AEdit: TcxCustomEdit; var AValue: Variant);
-//begin
-//  if AEdit is TcxMemo then
-//  begin
-//    AEdit.EditValue := AValue;
-//    if TcxMemo(AEdit).Lines.Count = 2 then
-//      TcxMemo(AEdit).Properties.ScrollBars := ssVertical;
-//
-//    if TcxMemo(AEdit).Lines.Count >= 5 then
-//      TcxMemo(AEdit).Properties.VisibleLineCount := 10;
-//  end;
-//end;
 
 procedure TForm1.Downloadpsexectocurrentdirectory1Click(Sender: TObject);
 var
